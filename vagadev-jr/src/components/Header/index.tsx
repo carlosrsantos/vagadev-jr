@@ -1,11 +1,12 @@
-import { Container } from './styles';
+import { Container, Content } from './styles';
+import { Carousel } from '../Carousel';
 
-export function Header(){
-  return(
-   
+export function Header(){ 
+
+  return(   
       <Container>
-        
-      </Container>
-    
+        <Content/>       
+        <Carousel />      
+      </Container>    
   )
 }

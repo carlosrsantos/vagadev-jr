@@ -1,10 +1,10 @@
 
-import { MainBanner } from "./components/MainBanner";
+import { Banner } from "./components/Banner";
 
 export function App() {
   return (
     <>
-      <MainBanner />      
+      <Banner />      
     </>
   );
 }
