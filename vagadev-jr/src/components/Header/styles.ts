@@ -10,6 +10,7 @@ export const Content = styled.div`
   height: 35px;
   margin: 0 auto;
   padding: 0 auto;
+  border:solid 1px #fff;
  
   display:flex;
   align-items: center;

@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "@types/react-slick": "^0.23.4"
-  },
-  "dependencies": {
-    "react-slick": "^0.28.1"
-  }
-}

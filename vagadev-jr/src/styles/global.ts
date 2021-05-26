@@ -13,16 +13,16 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  /* html {
-    @media (max-width: ) {
+  html {
+    @media (max-width: 1120px ) {
       font-size: 93.75%;
     }
 
-    @media (max-width: ) {
+    @media (max-width: 720px ) {
       font-size: 87.5%;
     }
   }
- */
+ 
   body {
     margin: 0;
     padding: 0;
