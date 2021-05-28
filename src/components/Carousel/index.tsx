@@ -1,57 +1,45 @@
-import { useEffect, useRef, useState } from "react";
+import Slider from 'react-slick';
+
+import {Wrapper} from './styles';
+
 import banner01 from '../../assets/img/principal_banner_desktop.jpg';
 import banner02 from '../../assets/img/principal_banner_desktop_02.jpg';
 
-import { Buttons} from '../Buttons';
-
-import { Slide } from './styles';
 
 export function Carousel() {
+  /* const settings = {
+      dots: false,
+      autoplay: true,
+      infinite: true,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 2,
+      initialSlide: 2
+  } */
 
-  const [index, setIndex] = useState(0);
-  const [width, setWidth] = useState(0);
-  const [xPosition, setXPosition] = useState(0);
-  const images = [
-    banner01,
-    banner02
-  ];
+  const renderSlides = () =>
+    [banner01,banner02].map( img => (
+      <div className='items'>
+        <div className="item" 
+           >
+          <img src={img} alt="Banner" />
+          </div>
+      </div>
+    ));
 
-  const handleClickPrev = () => { 
-    if (index === 0) return;
-    setIndex(index - 1);
-    setXPosition(xPosition + width);
-  };
-  const handleClickNext = () => {
-    if (index === images.length - 1) {
-      setIndex(0);
-      setXPosition(0);
-    } else {
-      setIndex(index + 1);
-      setXPosition(xPosition - width);
-    }
-  };
-
-  const slideRef = useRef(0);
-  
-  useEffect(() => {
-    if (slideRef.current) {
-      const width = slideRef.current;
-      setWidth(width);
-    }
-  }, [setWidth]);
-
-  return (
-    <>
-      <Slide xPosition={xPosition} ref={slideRef}>
-        {images.map((img, i) => (
-          <img src={img} alt='Banner' key={i} />
-        ))}
-      </Slide>
-      <Buttons
-        handleClickPrev={handleClickPrev}
-        handleClickNext={handleClickNext}
-      />
-   </>
+  return(
+    <Wrapper>
+      <Slider
+        dots={true}
+        slidesToShow={2}
+        slidesToScroll={2}
+        autoplay={true}
+        autoplaySpeed={3000} 
+      > 
+        {/* {renderSlides()}       */}
+      </Slider>
+    </Wrapper>
   );
+  
 
 }

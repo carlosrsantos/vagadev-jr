@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
+
 export const Container = styled.header`
-  background: var(--background);
+  background: black;
   `;
   
 export const Content = styled.div`
   background: #000;
+  
   max-width: 1120px;
   height: 35px;
   margin: 0 auto;
@@ -18,11 +20,3 @@ export const Content = styled.div`
 
 `;
 
-/* export const Wrapper = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eaeaea;
-`; */
